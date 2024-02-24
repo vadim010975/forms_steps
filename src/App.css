@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+label {
+  display: inline-block;
+}
+
+.container {
+  width: 580px;
+  padding: 25px;
+}
+
+form {
+  display: flex;
+  gap: 23px;
+}
+
+label p {
+  padding: 10px 0;
+}
+
+input {
+  width: 193px;
+  height: 50px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.form_btn {
+  height: 50px;
+  font-size: 16px;
+  background-color: #fff;
+  align-self: flex-end;
+  flex-grow: 1;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.list_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.list {
+  border: 1px solid #000000;
+  border-radius: 25px;
+  padding: 25px 40px;
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.list_item:last-child {
+  margin-bottom: 0;
+}
+
+.icon_btn {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.edit_btn {
+  background-image: url('./svg/pencil.svg');
+  margin-right: 5px;
+}
+
+.remove_btn {
+  background-image: url('./svg/form-x.svg');
+}
