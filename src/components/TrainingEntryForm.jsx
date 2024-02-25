@@ -1,31 +1,6 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const TrainingEntryForm = ({ onSubmit, input }) => {
-
-  const [data, setData] = useState({
-    input: null,
-    date: '',
-    count: '',
-  });
-
-  if (input != data.input) {
-    setData({
-      ...data,
-      date: input ? input.date : '',
-      count: input ? input.count : '',
-      input,
-    });
-  }
-
-  const onChange = (event) => {
-    const { target } = event;
-    const { name, value } = target;
-    setData({
-      ...data,
-      [name]: value,
-    });
-  }
+const TrainingEntryForm = ({ onSubmit, data, onChange }) => {
 
   return (
     <form onSubmit={onSubmit} className="form">
@@ -44,7 +19,11 @@ const TrainingEntryForm = ({ onSubmit, input }) => {
 
 TrainingEntryForm.propTypes = {
   onSubmit: PropTypes.func,
-  input: PropTypes.object,
+  data: PropTypes.shape({
+    date: PropTypes.string,
+    count: PropTypes.string,
+  }),
+  onChange: PropTypes.func,
 }
 
 export default TrainingEntryForm;
